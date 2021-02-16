@@ -1,0 +1,28 @@
+//对标题字符串进行截取
+var sub = function(val) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+  if (val.length > 34) {
+    return val.substring(0, 34) + "...";
+  } else {
+    return val;
+  }
+}
+
+//对日期字符串进行截取
+var date = function(val) {
+  return val.substring(0, 10);
+}
+
+//对图片进行拼接http://25y41l4404.wicp.vip/imgUpload/information/0c021f5165c54a6caf170e161a394cf9.png
+var imgUrl = function(val) {
+  var first = "https://www.feifengnuantong.com/information/" + val;
+  return first;
+}
+
+module.exports = {
+  sub: sub,
+  date: date,
+  imgUrl: imgUrl
+};

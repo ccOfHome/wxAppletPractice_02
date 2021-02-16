@@ -1,0 +1,23 @@
+page{background-color: #F5F5F5;}
+
+.content{margin: 15rpx;padding: 10rpx;background-color: white;padding-left: 15rpx;}
+
+.text{font-size: 36rpx;margin-top: 15rpx;}
+
+.txt{color: grey;font-size: 36rpx;margin-top: 15rpx;}
+
+.tt{color: yellow;font-size: 36rpx;margin-top: 15rpx;}
+
+.date{display: flex;flex-direction: row;justify-content: space-between;border-top: 1rpx solid grey;padding-top: 15rpx;margin-top: 15rpx;line-height: 70rpx;}
+
+.color{color: grey;}
+
+.btns{display: flex;flex-direction: row;}
+
+.btn{height: 70rpx;line-height: 70rpx;color: white;background-color: orange;font-size: 36rpx;margin: 5rpx;}
+
+.underbtn{height: 70rpx;line-height: 70rpx;color: white;background-color: grey;font-size: 36rpx;margin: 5rpx;}
+
+.empty{display: flex;flex-direction: column;align-items: center; margin-top: 200rpx;}
+
+.emptyImg{width: 180rpx;height: 220rpx;}

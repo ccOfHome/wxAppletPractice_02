@@ -1,0 +1,72 @@
+<view>
+  <form bindsubmit="submit">
+    <block wx:for="{{productSum}}" wx:for-item="item" wx:for-index="ind">
+      <!--第一个发布产品-->
+      <view class="addForm">
+        <label class="bigLabel">发布产品
+          <text hidden="{{productSum<2}}">{{ind+1}}</text>
+        </label>
+        <view class="contain">
+          <view class="row">
+            <label class="label">产品名称：</label>
+            <input placeholder="请输入产品名称" bindblur="getProductName" data-index="{{ind}}"  class="_input" placeholder-class="placeholder" value="{{produceName[ind]}}"></input>
+          </view>
+          <view class="row">
+            <label class="label">产品类型：</label>
+            <picker bindchange="bindPickerChange" data-index="{{ind}}" range="{{procutType}}" value="{{productIndex[ind]}}">
+              <view class="picker">
+                {{procutType[productIndex[ind]]}}
+              </view>
+            </picker>
+          </view>
+          <view class="row">
+            <label class="address">公司地址：</label>
+            <image bindtap="getLocation" data-index="{{ind}}" class="arrowright" src="../../img/arrowright.png"></image>
+          </view>
+          <view class="drow">
+            <label class="product">产品规格</label>
+            <textarea class="textarea" bindblur="getproduceSpecs" data-index="{{ind}}"  placeholder="请输入产品规格" value="{{produceSpecs[ind]}}"></textarea>
+          </view>
+          <view class="row">
+            <label class="label">产品规格多样：</label>
+            <switch class="radio" data-index="{{ind}}" bindchange="click" checked="{{check[ind]}}"></switch>
+          </view>
+          <view class="row">
+            <view class="nrow" hidden="{{single[ind]}}">
+              <label class="label">产品价格：</label>
+              <input class="input" bindblur="getprice" data-index="{{ind}}"  placeholder="请输入产品价格" placeholder-class="placeholder" value="{{price[ind]}}"></input>
+              <text class="text">元</text>
+            </view>
+            <!--产品价格-双-->
+            <view class="nrow" hidden="{{double[ind]}}">
+              <label class="label">产品价格：</label>
+              <input class="input" bindblur="getpriceLower" data-index="{{ind}}"  placeholder="请输入产品价格" placeholder-class="placeholder" value="{{priceLower[ind]}}"></input>
+              <text class="text">-</text>
+              <input class="input" bindblur="getpriceUpper" data-index="{{ind}}"  placeholder="请输入产品价格" placeholder-class="placeholder" value="{{priceUpper[ind]}}"></input>
+              <text class="text">元</text>
+            </view>
+            <!--产品价格-双-->
+          </view>
+          <view class="row">
+            <label class="label">计量单位：</label>
+            <input placeholder="请输入计量单位" bindblur="getmeasureUnit" data-index="{{ind}}"  class="_input" placeholder-class="placeholder" value="{{measureUnit[ind]}}"></input>
+          </view>
+          <view class="rownoBorder">
+            <label class="product">产品图片（请上传一张产品图片）</label>
+            <image bindtap="upProductImg" wx:if='{{productImg[ind]}}' data-index="{{ind}}" class="aptImg" src="{{productImg[ind]}}"></image>
+          </view>
+          <view class="drow">
+            <label class="product">产品详情</label>
+            <textarea class="textarea" bindblur="getproduceDetail" data-index="{{ind}}"  placeholder="请输入产品详情" value="{{produceDetail[ind]}}"></textarea>
+          </view>
+        </view>
+      </view>
+      <!--第一个发布产品-->
+    </block>
+    <view class="addProduct" bindtap="addProduct" wx:if="{{count}}">添加产品</view>
+    <view>
+      <button formType="submit" size="mini" class="btn" wx:if="{{count}}">{{btnName[0]}}</button>
+        <button formType="submit" size="mini" class="btn" wx:else>{{btnName[1]}}</button>
+    </view>
+  </form>
+</view>

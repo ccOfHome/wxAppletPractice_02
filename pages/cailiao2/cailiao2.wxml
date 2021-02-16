@@ -1,0 +1,44 @@
+<wxs src="cailiao2.wxs" module="tools" />
+
+<view>
+  <!--一条记录-->
+  <view class="Brow" hidden="{{hidden}}">
+    <block wx:for="{{content}}" wx:for-item="item" wx:for-index="index">
+      <view class="content" bindtap="" data-ind="">
+        <image class="head" src="{{tools.imgUrl(content[index].producePicPath)}}"></image>
+        <view class="text">{{content[index].produceName}}</view>
+        <!--单个价格--->
+        <view wx:if="{{priceSingle[index]}}">
+          <text class="txt">￥</text>
+          <text class="txt">{{content[index].price}}</text>
+          <text class="txt">元</text>
+        </view>
+        <!--价格区间--->
+        <view wx:if="{{priceDouble[index]}}">
+          <text class="txt">￥</text>
+          <text class="txt">{{content[index].priceLower}}</text>
+          <text class="txt">-￥</text>
+          <text class="txt">{{content[index].priceUpper}}</text>
+          <text class="txt">元</text>
+        </view>
+        <!--审核完成且未下架-->
+        <view class="btns" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==0?false:true}}">
+          <button class="btn" bindtap="alter" data-id="{{content[index].id}}">修改</button>
+          <button class="btn" bindtap="soldOut" data-id="{{content[index].id}}" data-ind="{{index}}">下架</button>
+        </view>
+        <!--审核完成且下架-->
+        <view class="btns" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==1?false:true}}">
+          <button class="btn" bindtap="putaway" data-id="{{content[index].id}}" data-ind="{{index}}">上架</button>
+          <button class="underbtn">下架中</button>
+        </view>
+        <!--审核中且下架-->
+        <view class="check" style="color:grey;" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==2?false:true}}">审核中</view>
+      </view>
+    </block>
+  </view>
+  <!--一条记录-->
+  <view class="empty" hidden="{{!hidden}}">
+    <image class="emptyImg" src="../../img/empty.png"></image>
+    <view>暂无数据</view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--mine/zixunDetail/zixunDetail.wxml-->
+<view>
+  <view class="title">{{zixunDetail.title}}</view>
+  <view class="date">{{zixunDetail.date}}</view>
+  <view class="mainBody">
+    <rich-text class="mainText oMainText" nodes="{{zixunDetail.title}}"></rich-text>
+    <!-- <view wx:for='{{zixunDetail.content}}' class='mainText  {{item.is == 1 ? "oMainText" : ""}}'>{{item.text}}</view> -->
+    <rich-text class='mainText' nodes="{{zixunDetail.content}}"></rich-text>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+.addForm{margin-top: 20rpx;}
+
+.bigLabel{padding: 30rpx;color: orange;font-size: 32rpx;}
+
+.contain{margin-top: 20rpx;}
+
+.row{border-bottom: 1rpx gray solid;padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.label{float: left;overflow: auto;color: black;font-size: 26rpx;}
+
+.picker{display: flex;justify-content: flex-end;color: gray;font-size: 26rpx;}
+
+.address{color: black;font-size: 26rpx;}
+
+.arrowright{width: 25rpx;height: 25rpx;float: right;overflow: auto;margin-top: 15rpx;}
+
+.radio{display: flex;justify-content: flex-end;height: 50rpx;}
+
+orow{}
+
+.nrow{display: flex;flex-direction: row;justify-content: space-between;line-height: 50rpx;}
+
+.input{float: left; width: 30%;font-size: 26rpx;}
+
+._input{font-size: 26rpx;}
+
+.rownoBorder{padding: 30rpx;margin:0 25rpx;}
+
+.aptImg{display: block; width: 200rpx;height: 200rpx;margin-top:20rpx;border-radius: 20%;}
+
+.text{float: left;font-size: 24rpx;font-size: 26rpx;color: gray;}
+
+.placeholder{font-size: 26rpx;}
+
+.drow{padding: 20rpx;margin-left: 20rpx;margin-right: 60rpx;}
+
+.product{font-size: 26rpx;color: black;}
+
+.textarea{width: 100%;height: 100rpx; border: 1rpx solid gray;padding: 20rpx;font-size: 26rpx;margin-top: 20rpx;}
+
+.addProduct{color: orange;text-align: center;font-size: 26rpx;}
+
+.btn{background-color: orange;color: white;margin-top: 20rpx;width: 90%;margin-left: 5%;height: 80rpx;}

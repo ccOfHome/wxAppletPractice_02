@@ -1,0 +1,17 @@
+.page{padding:25rpx;}
+
+.content{display: flex;flex-direction: column;align-content: center;border-bottom: solid gray 2rpx;padding-bottom: 30rpx;}
+
+.row{margin-top: 20rpx;}
+
+.Btitle{font-weight: bold;font-size: 30rpx;}
+
+.img{width: 380rpx; height: 180rpx;float: left;margin-right: 10rpx;}
+
+.text{line-height: 32rpx;position: relative;left: 5rpx;}
+
+.title{font-size: 26rpx;color: gray;display: block;}
+
+.con{font-size: 26rpx;color: gray;}
+
+.date{font-size: 26rpx;color: gray;display: block;margin-top: 32rpx;}

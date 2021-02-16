@@ -1,0 +1,23 @@
+page{
+  background: #f7f7f7;
+}
+
+.text{
+  color: #3380EB;
+  text-align: center;
+}
+
+view{
+  padding: 20rpx;
+}
+
+input{
+  height: 85rpx;
+  background: #fff;
+  padding-left: 30rpx;
+}
+
+button{
+  margin: 180rpx 25rpx;
+}
+

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/threeToone/threeToone",
+    "pages/zixun/zixun",
+    "pages/zixunDetail/zixunDetail",
+    
+    "pages/threeToone_old/threeToone_old",
+    "pages/cailiao2/cailiao2",
+    "pages/yusuan2/yusuan2",
+    "pages/laowu2/laowu2",
+    "pages/zhaobiao/zhaobiao",
+    "pages/dashang/dashang",
+    "pages/zhaopin/zhaopin",
+    "pages/zhaopin2/zhaopin2",
+    "pages/lianxi/lianxi",
+    
+    "pages/cailiao/cailiao",
+    "pages/yusuan/yusuan",
+    "pages/laowu/laowu",
+    "pages/neirong/neirong",
+    "pages/huangfeng/huangfeng",
+    "pages/info/info",
+    "pages/mediu/mediu",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/test1/test1",
+    "pages/show/show",
+    "pages/joke/joke",
+    "pages/textjoke/textjoke",
+    "pages/image/image"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

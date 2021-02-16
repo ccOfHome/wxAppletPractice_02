@@ -1,0 +1,33 @@
+/* mine/zixunDetail/zixunDetail.wxss */
+
+.title{
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: 600;
+
+}
+
+.date{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #777;
+}
+
+.mainBody{
+  margin-top: 20rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+}
+
+.mainText{
+  text-indent: 50rpx;
+  
+}
+
+.oMainText{
+  text-indent: 0rpx;
+  font-weight: 600;
+}

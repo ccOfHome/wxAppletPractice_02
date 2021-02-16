@@ -1,0 +1,49 @@
+.header{margin-top: 30rpx; display: flex;justify-content: center;flex-direction: column;align-items: center;}
+
+.contain{width: 150rpx;height: 150rpx; border: 1rpx gray solid;border-radius: 50%;text-align: center;line-height: 150rpx;font-size: 40rpx;color: gray;}
+
+.img{width: 150rpx;height: 150rpx;border-radius: 50%;display: block;}
+
+.imgTxt{color: gray;font-size: 26rpx;}
+
+.content{margin-top: 30rpx;}
+
+.row{border-bottom: 1rpx gray solid;padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.rownoBorder{padding: 30rpx;margin:0 25rpx;}
+
+.photo{font-size: 26rpx;color: black;}
+
+._input{font-size: 26rpx;}
+
+.aptImg{display: block; width: 200rpx;height: 200rpx;margin-top:20rpx;border-radius: 20%;}
+
+.label{float: left;overflow: auto;color: black;font-size: 26rpx;}
+
+.picker{display: flex;justify-content: flex-end;color: gray;font-size: 26rpx;}
+
+.arrowright{width: 25rpx;height: 25rpx;float: right;overflow: auto;margin-top: 15rpx;}
+
+.textAll{display: inline-flex;}
+
+.expriText{border: solid 1rpx gray;font-size: 26rpx;color: gray;padding: 5rpx 20rpx;border-radius: 5rpx;margin: 5rpx;}
+
+.btnWell{border: solid 1rpx gray;background-color: white;color: gray;font-size: 26rpx;margin-top: 25rpx;}
+
+.drow{padding: 30rpx;margin-left: 20rpx;margin-right: 60rpx;}
+
+.textarea{width: 100%;height: 100rpx; border: 1rpx solid gray;padding: 20rpx;font-size: 26rpx;margin-top: 20rpx;}
+
+.card{margin-top:20rpx; border: solid 2rpx gray;margin-left: 50rpx;margin-right: 50rpx;text-align: center;height: 100rpx;line-height: 100rpx;}
+
+.cardImg{display: none;}
+
+.cardTxt{color: gray;margin-top: 50rpx;font-size: 26rpx;}
+
+.IDcardPhoto{padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.IDcard{margin-top: 20rpx; display: block; width: 420rpx;height: 280rpx;border: solid 2rpx gray;padding: 10rpx;}
+
+.btn{background-color: orange;color: white;margin-top: 20rpx;width: 90%;margin-left: 5%;height: 80rpx;}
+
+.placeholder{font-size: 26rpx;}

@@ -1,0 +1,27 @@
+<!--录音-->
+<button bindtap="start">开始</button>
+
+<button bindtap="pause">暂停</button>
+
+<button bindtap="go">继续</button>
+
+<button bindtap="stop" type="warn">停止</button>
+
+
+<button bindtap="play"></button>
+
+<!--获取系统信息-->
+<button bindtap="test">获取系统信息</button>
+<view>手机品牌{{brand}}</view>
+<view>手机型号{{model}}</view>
+<view>宽度{{width}}</view>
+<view>高度{{height}}</view>
+
+<!--获取网络信息-->
+<button bindtap="test1">获取网络信息</button>
+
+
+<map style="height：{{height}}px；width:{{width}}px;"></map>
+
+<!--获取位置信息-->
+<button bindtap="test2">获取位置信息</button>

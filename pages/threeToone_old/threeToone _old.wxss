@@ -1,0 +1,159 @@
+.row_{display: flex;flex-direction: row;justify-content: space-around;height: 50rpx;}
+
+.title_{width: 33%;text-align: center;padding-bottom: 70rpx;font-size: 32rpx;}
+
+.contain_{background-color: white;}
+
+/*表单1*/
+.header_0{margin-top: 50rpx; display: flex;justify-content: center;flex-direction: column;align-items: center;}
+
+.contain_0{width: 150rpx;height: 150rpx; border: 1rpx gray solid;border-radius: 50%;text-align: center;line-height: 150rpx;font-size: 40rpx;color: gray;}
+
+.img_0{width: 150rpx;height: 150rpx;border-radius: 50%;display: block;}
+
+.imgTxt_0{color: gray;font-size: 26rpx;}
+
+.content_0{margin-top: 30rpx;}
+
+.row_0{border-bottom: 1rpx gray solid;padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.label_0{float: left;color: black;font-size: 26rpx;}
+
+._input_0{font-size: 26rpx;}
+
+.orow_0{font-size: 32rpx;color: black;}
+
+.nrow_0{font-size: 26rpx;height: 60rpx;margin-top: 20rpx;display: flex;flex-direction: row;justify-content: space-between;line-height: 50rpx;}
+
+.input_0{float: left;width: 200rpx;font-size: 26rpx;}
+
+.text_0{float: left;color: gray;}
+
+.radio_0{display: flex;justify-content: flex-end;color: gray;font-size: 26rpx;}
+
+.picker_0{display: flex;justify-content: flex-end;color: gray;font-size: 26rpx;}
+
+.rowEx_0{border-bottom: 1rpx gray solid;padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.experi_0{color: black;font-size: 26rpx;}
+
+.arrowright_0{width: 25rpx;height: 25rpx;float: right;overflow: auto;margin-top: 15rpx;}
+
+.textAll_0{display: inline-flex;}
+
+.expriText_0{border: solid 1rpx gray;font-size: 26rpx;color: gray;padding: 5rpx 20rpx;border-radius: 5rpx;margin: 5rpx;}
+
+.btnWell_0{border: solid 1rpx gray;background-color: white;color: gray;font-size: 26rpx;margin-top: 25rpx;}
+
+.drow_0{padding: 30rpx;margin-left: 20rpx;margin-right: 60rpx;}
+
+.textarea_0{width: 100%;height: 100rpx; border: 1rpx solid gray;padding: 20rpx;font-size: 26rpx;margin-top: 20rpx;}
+
+.card_0{margin-top:20rpx; border: solid 2rpx gray;margin-left: 50rpx;margin-right: 50rpx;text-align: center;height: 100rpx;line-height: 100rpx;}
+
+.cardTxt_0{color: gray;margin-top: 50rpx;font-size: 26rpx;}
+
+.IDcardPhoto_0{padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.IDcard_0{margin-top: 20rpx; display: block; width: 420rpx;height: 280rpx;border: solid 2rpx gray;padding: 10rpx;}
+
+.btn_0{background-color: orange;color: white;margin-top: 20rpx;width: 90%;margin-left: 5%;height: 80rpx;}
+
+.placeholder_0{font-size: 26rpx;}
+
+/*表单2*/
+.header_1{margin-top: 50rpx; display: flex;justify-content: center;flex-direction: column;align-items: center;}
+
+.contain_1{width: 150rpx;height: 150rpx; border: 1rpx gray solid;border-radius: 50%;text-align: center;line-height: 150rpx;font-size: 40rpx;color: gray;}
+
+.img_1{width: 150rpx;height: 150rpx;border-radius: 50%;display: block;}
+
+.imgTxt_1{color: gray;font-size: 26rpx;}
+
+.content_1{margin-top: 30rpx;}
+
+.row_1{border-bottom: 1rpx gray solid;padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.rownoBorder_1{padding: 30rpx;margin:0 25rpx;}
+
+.photo_1{font-size: 26rpx;color: black;}
+
+._input_1{font-size: 26rpx;}
+
+.aptImg_1{display: block; width: 200rpx;height: 200rpx;margin-top:20rpx;border-radius: 20%;}
+
+.label_1{float: left;overflow: auto;color: black;font-size: 26rpx;}
+
+.picker_1{display: flex;justify-content: flex-end;color: gray;font-size: 26rpx;}
+
+.arrowright_1{width: 25rpx;height: 25rpx;float: right;overflow: auto;margin-top: 15rpx;}
+
+.textAll_1{display: inline-flex;}
+
+.expriText_1{border: solid 1rpx gray;font-size: 26rpx;color: gray;padding: 5rpx 20rpx;border-radius: 5rpx;margin: 5rpx;}
+
+.btnWell_1{border: solid 1rpx gray;background-color: white;color: gray;font-size: 26rpx;margin-top: 25rpx;}
+
+.drow_1{padding: 30rpx;margin-left: 20rpx;margin-right: 60rpx;}
+
+.textarea_1{width: 100%;height: 100rpx; border: 1rpx solid gray;padding: 20rpx;font-size: 26rpx;margin-top: 20rpx;}
+
+.card_1{margin-top:20rpx; border: solid 2rpx gray;margin-left: 50rpx;margin-right: 50rpx;text-align: center;height: 100rpx;line-height: 100rpx;}
+
+.cardImg_1{display: none;}
+
+.cardTxt_1{color: gray;margin-top: 50rpx;font-size: 26rpx;}
+
+.IDcardPhoto_1{padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.IDcard_1{margin-top: 20rpx; display: block; width: 420rpx;height: 280rpx;border: solid 2rpx gray;padding: 10rpx;}
+
+.btn_1{background-color: orange;color: white;margin-top: 20rpx;width: 90%;margin-left: 5%;height: 80rpx;}
+
+.placeholder_1{font-size: 26rpx;}
+
+/*表单3*/
+
+.addForm_2{margin-top: 20rpx;}
+
+.bigLabel_2{padding: 30rpx;color: orange;font-size: 32rpx;}
+
+.contain_2{margin-top: 20rpx;}
+
+.row_2{border-bottom: 1rpx gray solid;padding: 20rpx;margin:0 25rpx;line-height: 50rpx;}
+
+.label_2{float: left;overflow: auto;color: black;font-size: 26rpx;}
+
+.picker_2{display: flex;justify-content: flex-end;color: gray;font-size: 26rpx;}
+
+.address_2{color: black;font-size: 26rpx;}
+
+.arrowright_2{width: 25rpx;height: 25rpx;float: right;overflow: auto;margin-top: 15rpx;}
+
+.radio_2{display: flex;justify-content: flex-end;height: 50rpx;}
+
+.orow_2{}
+
+.nrow_2{display: flex;flex-direction: row;justify-content: space-between;line-height: 50rpx;}
+
+.input_2{float: left; width: 30%;font-size: 26rpx;}
+
+._input_2{font-size: 26rpx;}
+
+.rownoBorder_2{padding: 30rpx;margin:0 25rpx;}
+
+.aptImg_2{display: block; width: 200rpx;height: 200rpx;margin-top:20rpx;border-radius: 20%;}
+
+.text_2{float: left;font-size: 26rpx;color: gray;}
+
+.placeholder_2{font-size: 26rpx;}
+
+.drow_2{padding: 20rpx;margin-left: 20rpx;margin-right: 60rpx;}
+
+.product_2{font-size: 26rpx;color: black;}
+
+.textarea_2{width: 100%;height: 100rpx; border: 1rpx solid gray;padding: 20rpx;font-size: 26rpx;margin-top: 20rpx;}
+
+.addProduct_2{color: orange;text-align: center;font-size: 26rpx;}
+
+.btn_2{background-color: orange;color: white;margin-top: 20rpx;width: 90%;margin-left: 5%;height: 80rpx;}

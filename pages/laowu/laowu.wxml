@@ -1,0 +1,81 @@
+<view>
+  <form bindsubmit="submit">
+    <view class="header" bindtap="upHeadImg">
+      <view class="contain">
+        <text hidden="{{add}}">+</text>
+        <image wx:if='{{imgUrl}}' class="img" src="{{imgUrl}}" hidden="{{show}}"></image>
+      </view>
+      <text class="imgTxt">上传头像</text>
+    </view>
+    <view class="content">
+      <view class="row">
+        <label class="label">姓名：</label>
+        <input name="captainName" class="_input" placeholder="请输入姓名" placeholder-class="placeholder" value="{{captainName}}" placeholder-style="text-align:right;"></input>
+      </view>
+      <view class="row">
+        <label class="label">电话：</label>
+        <input name="telephone" class="_input" type="number" placeholder="请输入电话" placeholder-class="placeholder" value="{{telephone}}" placeholder-style="text-align:right;"></input>
+      </view>
+      <view class="row">
+        <label class="label">团队人数：</label>
+        <input name="workerNumber" value="{{workerNumber}}" class="_input" type="number" placeholder="请输入人数" placeholder-class="placeholder" placeholder-style="text-align:right;"></input>
+      </view>
+      <view class="row">
+        <label class="orow">带证人数：</label>
+        <view class="nrow">
+          <label class="label">电工：</label>
+          <input name="electrician" class="input" placeholder="请输入电工人数" placeholder-style="font-size:24rpx;" value="{{electrician}}"></input>
+          <text class="text">人</text>
+          <label class="label">焊工：</label>
+          <input name="welder" class="input" placeholder="请输入焊工人数" placeholder-style="font-size:24rpx;" value="{{welder}}"></input>
+          <text class="text">人</text>
+        </view>
+      </view>
+      <view class="row">
+        <label class="label">是否有保险：</label>
+        <radio-group class="radio" name="isInsurance">
+          <radio value="1" checked="{{isInsurance}}">是</radio>
+          <radio value="0" checked="{{!isInsurance}}">否</radio>
+        </radio-group>
+      </view>
+      <view class="row">
+        <label class="label">接单区域：</label>
+        <picker name="receivingArea" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            {{region[0]}}{{region[1]}}{{region[2]}}
+          </view>
+        </picker>
+      </view>
+      <view class="rowEx">
+        <label class="experi">选择经验类型（可多选）：</label>
+        <image bindtap="selectExpri" class="arrowright" src="../../img/arrowright.png"></image>
+      </view>
+      <!--隐藏的经验栏目-->
+      <view class="row" hidden="{{expri}}">
+        <view class="textAll" wx:for="{{expriType}}" wx:for-item="item" wx:for-index="index">
+          <text class="expriText" style="border: solid 1rpx {{item.borderColor}};" data-text="{{item.txt}}" data-num="{{index}}" bindtap="clickExpri">{{item.txt}}</text>
+        </view>
+        <button bindtap="closeExpri" type="mini" class="btnWell">我选好了</button>
+      </view>
+      <!--隐藏的经验栏目-->
+      <view class="drow">
+        <label class="orow">经验描述：</label>
+        <textarea name="experienceDesc" value="{{experienceDesc}}" class="textarea" placeholder="经验描述"></textarea>
+      </view>
+      <view style="color:red;font-size:25rpx;margin:0 25rpx;padding-left: 30rpx;padding-right: 30rpx;">
+        为了提高您信息的浏览量特别提示：请填写经验描述，一定要填3个业绩，业绩包括：地址，面积，系统形式。
+      </view>
+      <view class="card" bindtap="upIDCard" hidden="{{IDcardBorder}}">
+        <text class="cardTxt">点击上传身份证正面</text>
+      </view>
+      <view class="IDcardPhoto" bindtap="upIDCard" hidden="{{IDcardPhoto}}">
+        <text class="orow">身份证正面照</text>
+        <image wx:if='{{card}}' class="IDcard" src="{{card}}"></image>
+      </view>
+      <view>
+        <button formType="submit" size="mini" class="btn" wx:if="{{count}}">{{btnName[0]}}</button>
+        <button formType="submit" size="mini" class="btn" wx:else>{{btnName[1]}}</button>
+      </view>
+    </view>
+  </form>
+</view>

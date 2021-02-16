@@ -1,0 +1,36 @@
+<wxs src="zhaobiao.wxs" module="tools" />
+
+<view>
+  <block wx:for="{{content}}" wx:for-item="item" wx:for-index="index">
+    <!--一条记录-->
+    <view class="content" hidden="{{hidden}}">
+      <view bindtap="getDetail">
+        <view class="text">{{content[index].biddingName}}</view>
+        <view class="txt">{{content[index].detailDesc}}</view>
+        <view class="tt">
+          招标时间：{{content[index].biddingBeginTime}}-{{content[index].biddingEndTime}}
+        </view>
+      </view>
+      <view class="date">
+        <text class="color">{{tools.date(content[index].createTime)}}</text>
+        <!--审核完成且未下架-->
+        <view class="btns" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==0?false:true}}">
+          <button class="btn" bindtap="alter" data-id="{{content[index].id}}" data-expritype="{{content[index].biddingType}}">修改</button>
+          <button class="btn" bindtap="soldOut" data-id="{{content[index].id}}" data-expritype="{{content[index].biddingType}}" data-ind="{{index}}">下架</button>
+        </view>
+        <!--审核完成且下架-->
+        <view class="btns" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==1?false:true}}">
+          <button class="btn" bindtap="putaway" data-id="{{content[index].id}}" data-expritype="{{content[index].biddingType}}" data-ind="{{index}}">上架</button>
+          <button class="underbtn">下架中</button>
+        </view>
+        <!--审核中且下架-->
+        <view class="btns" style="color:grey;" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==2?false:true}}">审核中</view>
+      </view>
+    </view>
+    <!--一条记录-->
+  </block>
+  <view class="empty" hidden="{{!hidden}}">
+    <image class="emptyImg" src="../../img/empty.png"></image>
+    <view>暂无数据</view>
+  </view>
+</view>

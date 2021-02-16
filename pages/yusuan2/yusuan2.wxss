@@ -1,0 +1,33 @@
+page{background-color: #F5F5F5;}
+
+.content{margin-top: 10rpx; margin-left: 10rpx; margin-right: 10rpx; padding-left: 20rpx;padding-right: 20rpx;background-color: white;}
+
+.row{display: flex;flex-direction: row;padding-top: 20rpx;}
+
+.headImg{width: 180rpx;height: 180rpx;border-radius: 50%;border: 1rpx solid grey;}
+
+.rrow{height: 180rpx;line-height: 100rpx;margin-left: 20rpx;}
+
+.nrow{display: flex;flex-direction: row;align-items: center;}
+
+.flag{width: 50rpx;height: 50rpx;}
+
+.Rflag{width: 50rpx;height: 50rpx;margin-left: 15rpx;}
+
+.txt{font-size: 26rpx;color: grey;margin-left: 10rpx;}
+
+.text{border: solid 1rpx grey;font-size: 26rpx;color: gray;padding: 5rpx 20rpx;border-radius: 5rpx;margin: 5rpx;}
+
+.Lrow{border-top: solid 1rpx grey;margin-top: 15rpx;display: flex;flex-direction: row;align-items: center;padding-top: 20rpx;padding-bottom: 20rpx;justify-content: space-between;}
+
+.Ltxt{font-size: 36rpx;color: grey;}
+
+.btns{display: flex;flex-direction: row;}
+
+.btn{height: 70rpx;line-height: 70rpx;color: white;background-color: orange;margin: 5rpx;font-size: 36rpx;}
+
+.underbtn{height: 70rpx;line-height: 70rpx;color: white;background-color: grey;font-size: 36rpx;margin: 5rpx;}
+
+.empty{display: flex;flex-direction: column;align-items: center; margin-top: 200rpx;}
+
+.emptyImg{width: 180rpx;height: 220rpx;}

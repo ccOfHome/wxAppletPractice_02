@@ -1,0 +1,21 @@
+.scroll1{
+  height: 500rpx;
+  width: 500rpx;
+  white-space: nowrap;
+}
+
+.scroll2{
+  height: 500rpx;
+  width: 500rpx;
+}
+
+.view1{
+  width: 300rpx;
+  height: 300rpx;
+  display: inline-block;
+}
+
+.view2{
+  width: 300rpx;
+  height: 300rpx;
+}

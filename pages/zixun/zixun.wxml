@@ -1,0 +1,26 @@
+<!-- 引入wxs脚本 -->
+<wxs src="zixun.wxs" module="tools" />
+
+<view class="page">
+  <block wx:for="{{content}}" wx:for-iten="item" wx:for-index="index">
+    <!--一条资讯-->
+    <view class="content" bindtap="getDetail" data-ind="{{index}}"  hidden="{{hidden}}">
+      <view class="row">
+        <text class="Btitle">{{item.title}}</text>
+      </view>
+      <view class="row">
+        <image class="img" wx:if='{{tools.imgUrl(item.picture)}}' src="{{tools.imgUrl(item.picture)}}"></image>
+        <view class="text">
+          <rich-text class="title" nodes="{{item.title}}"></rich-text>
+          <rich-text class="con" nodes="{{tools.sub(item.content)}}"></rich-text>
+          <rich-text class="date" nodes="{{tools.date(item.createTime)}}"></rich-text>
+        </view>
+      </view>
+    </view>
+    <!--一条资讯-->
+  </block>
+  <view class="empty" hidden="{{!hidden}}">
+    <image class="emptyImg" src="/images/no.png"></image>
+    <view style="margin-top:10rpx;font-size:30rpx;">暂无数据</view>
+  </view>
+</view>

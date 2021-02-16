@@ -1,0 +1,54 @@
+<view>
+  <view class="head">
+    <image class="headImg" src="../../img/head.png"></image>
+    <view class="name">王CC</view>
+  </view>
+  <view class="content">
+    <view class="title">我的店铺</view>
+    <view class="mall">
+      <view class="singleMall">
+        <image class="mallImg" src="../../img/black.png"></image>
+        <view class="mallName">劳务队</view>
+      </view>
+      <view class="singleMall">
+        <image class="mallImg" src="../../img/black.png"></image>
+        <view class="mallName">设计预算师</view>
+      </view>
+      <view class="singleMall">
+        <image class="mallImg" src="../../img/black.png"></image>
+        <view class="mallName">设备材料</view>
+      </view>
+      <view class="singleMall">
+        <image class="mallImg" src="../../img/black.png"></image>
+        <view class="mallName">招标公告</view>
+      </view>
+      <view class="singleMall">
+        <image class="mallImg" src="../../img/black.png"></image>
+        <view class="mallName">招聘信息</view>
+      </view>
+    </view>
+  </view>
+  <view class="ul">
+    <view class="li">
+      <image class="liImg" src="../../img/black.png"></image>
+      <view class="liName">完善个人信息</view>
+      <view class="liState">已完善</view>
+      <image class="arrowRight" src="../../img/arrowright.png"></image>
+    </view>
+    <view class="li">
+      <image class="liImg" src="../../img/black.png"></image>
+      <view class="liName">发布招聘信息</view>
+      <image class="arrowRight"  src="../../img/arrowright.png"></image>
+    </view>
+    <view class="li">
+      <image class="liImg" src="../../img/black.png"></image>
+      <view class="liName">我的打赏</view>
+      <image class="arrowRight" src="../../img/arrowright.png"></image>
+    </view>
+    <view class="li">
+      <image class="liImg" src="../../img/black.png"></image>
+      <view class="liName">联系客服</view>
+      <image class="arrowRight" src="../../img/arrowright.png"></image>
+    </view>
+  </view>
+</view>

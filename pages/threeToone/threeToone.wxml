@@ -1,0 +1,230 @@
+<view>
+  <view class="row_">
+    <view class="title_" style="border-bottom: solid 2rpx {{borderColor[0]}};color:{{fontColor[0]}}" bindtap="clickLabour" data-ind="0">劳务队加盟</view>
+    <view class="title_" style="border-bottom: solid 2rpx {{borderColor[1]}};color:{{fontColor[1]}};" bindtap="clickBudget" data-ind="1">设计预算师加盟</view>
+    <view class="title_" style="border-bottom: solid 2rpx {{borderColor[2]}};color:{{fontColor[2]}}" bindtap="clickNotice" data-ind="2">设备材料加盟</view>
+  </view>
+  <view hidden="{{flagArray[0]}}" class="contain_">
+    <view>
+      <form bindsubmit="submit_0">
+        <view class="header_0" bindtap="upHeadImg_0">
+          <view class="contain_0">
+            <text hidden="{{add_0}}">+</text>
+            <image wx:if='{{imgUrl_0}}' class="img_0" src="{{imgUrl_0}}" hidden="{{show_0}}"></image>
+          </view>
+          <text class="imgTxt_0">上传头像</text>
+        </view>
+        <view class="content_0">
+          <view class="row_0">
+            <label class="label_0">姓名：</label>
+            <input name="captainName_0" class="_input_0" placeholder="请输入姓名" placeholder-class="placeholder_0" value="{{captainName_0}}" style="text-align:right;"></input>
+          </view>
+          <view class="row_0">
+            <label class="label_0">电话：</label>
+            <input name="telephone_0" class="_input_0" type="number" placeholder="请输入电话" placeholder-class="placeholder_0" value="{{telephone_0}}" style="text-align:right;"></input>
+          </view>
+          <view class="row_0">
+            <label class="label_0">团队人数：</label>
+            <input name="workerNumber_0" value="{{workerNumber_0}}" class="_input_0" type="number" placeholder="请输入人数" placeholder-class="placeholder_0" style="text-align:right;"></input>
+          </view>
+          <view class="row_0">
+            <label class="orow_0">带证人数：</label>
+            <view class="nrow_0">
+              <label class="label_0">电工：</label>
+              <input name="electrician_0" class="input_0" placeholder="请输入电工人数" placeholder-style="font-size:24rpx;" style="text-align:center;" value="{{electrician_0}}"></input>
+              <text class="text_0">人</text>
+              <label class="label_0">焊工：</label>
+              <input name="welder_0" class="input_0" placeholder="请输入焊工人数" placeholder-style="font-size:24rpx;" style="text-align:center;" value="{{welder_0}}"></input>
+              <text class="text_0">人</text>
+            </view>
+          </view>
+          <view class="row_0">
+            <label class="label_0">是否有保险：</label>
+            <radio-group class="radio_0" name="isInsurance_0">
+              <radio value="1" checked="{{isInsurance_0}}">是</radio>
+              <radio value="0" checked="{{!isInsurance_0}}">否</radio>
+            </radio-group>
+          </view>
+          <view class="row_0">
+            <label class="label_0">接单区域：</label>
+            <picker name="receivingArea_0" mode="region" bindchange="bindRegionChange_0" value="{{region_0}}" custom-item="{{customItem_0}}">
+              <view class="picker_0">
+                {{region_0[0]}}{{region_0[1]}}{{region_0[2]}}
+              </view>
+            </picker>
+          </view>
+          <view class="rowEx_0">
+            <label class="experi_0">选择经验类型（可多选）：</label>
+            <image bindtap="selectExpri_0" class="arrowright_0" src="/images/image//arrowright.png"></image>
+          </view>
+          <!--隐藏的经验栏目-->
+          <view class="row_0" hidden="{{expri_0}}">
+            <view class="textAll_0" wx:for="{{expriType_0}}" wx:for-item="item" wx:for-index="index">
+              <text class="expriText_0" style="border: solid 1rpx {{item.borderColor}};" data-text="{{item.txt}}" data-num="{{index_0}}" bindtap="clickExpri_0">{{item.txt}}</text>
+            </view>
+            <button bindtap="closeExpri_0" type="mini" class="btnWell_0">我选好了</button>
+          </view>
+          <!--隐藏的经验栏目-->
+          <view class="drow_0">
+            <label class="orow_0">经验描述：</label>
+            <textarea name="experienceDesc_0" value="{{experienceDesc_0}}" class="textarea_0" placeholder="经验描述"></textarea>
+          </view>
+          <view style="color:red;font-size:25rpx;margin:0 25rpx;padding-left: 30rpx;padding-right: 30rpx;">
+            为了提高您信息的浏览量特别提示：请填写经验描述，一定要填3个业绩，业绩包括：地址，面积，系统形式。
+          </view>
+          <view class="card_0" bindtap="upIDCard_0" hidden="{{IDcardBorder_0}}">
+            <text class="cardTxt_0">点击上传身份证正面</text>
+          </view>
+          <view class="IDcardPhoto_0" bindtap="upIDCard_0" hidden="{{IDcardPhoto_0}}">
+            <text class="orow_0">身份证正面照</text>
+            <image wx:if='{{card_0}}' class="IDcard_0" src="{{card_0}}"></image>
+          </view>
+          <view>
+            <button formType="submit" size="mini" class="btn_0" wx:if="{{count_0}}">{{btnName_0[0]}}</button>
+            <button formType="submit" size="mini" class="btn_0" wx:else>{{btnName_0[1]}}</button>
+          </view>
+        </view>
+      </form>
+    </view>
+  </view>
+  <view hidden="{{flagArray[1]}}" class="contain">
+    <view>
+      <form bindsubmit="submit_1">
+        <view class="header_1" bindtap="upHeadImg_1">
+          <view class="contain_1">
+            <text hidden="{{add_1}}">+</text>
+            <image wx:if='{{imgUrl_1}}' class="img_1" src="{{imgUrl_1}}" hidden="{{show_1}}"></image>
+          </view>
+          <text class="imgTxt_1">上传头像</text>
+        </view>
+        <view class="content_1">
+          <view class="row_1">
+            <label class="label_1">姓名：</label>
+            <input class="_input_1" name="designerName_1" value="{{designerName_1}}" placeholder="请输入姓名" placeholder-class="placeholder_1" style="text-align:right;"></input>
+          </view>
+          <view class="row_1">
+            <label class="label_1">电话：</label>
+            <input type="number" name="telephone_1" value="{{telephone_1}}" class="_input_1" placeholder="请输入电话" placeholder-class="placeholder_1" style="text-align:right;"></input>
+          </view>
+          <view class="row_1">
+            <label class="label_1">接单区域：</label>
+            <picker mode="region" bindchange="bindRegionChange_1" value="{{region_1}}" custom-item="{{customItem_1}}" name="receivingArea_1">
+              <view class="picker_1">
+                {{region_1[0]}}{{region_1[1]}}{{region_1[2]}}
+              </view>
+            </picker>
+          </view>
+          <view class="row_1">
+            <label class="label_1">资质证件（非必填）：</label>
+            <input placeholder="请输入证件名称" value="{{credentialsName_1}}" name="credentialsName_1" class="_input_1" placeholder-class="placeholder_1" style="text-align:right;"></input>
+          </view>
+          <view class="rownoBorder_1">
+            <label class="photo_1">资质证件照片</label>
+            <image bindtap="qualPhoto_1" wx:if='{{quaPhoto_1}}' class="aptImg_1" src="{{quaPhoto_1}}"></image>
+          </view>
+          <view class="row_1">
+            <label class="photo_1">选择经验类型（可多选）：</label>
+            <image bindtap="selectExpri_1" class="arrowright_1" src="/images/image//arrowright.png"></image>
+          </view>
+          <!--隐藏的经验栏目-->
+          <view class="row_1" hidden="{{expri_1}}">
+            <view class="textAll_1" wx:for="{{expriType_1}}" wx:for-item="item" wx:for-index="index">
+              <text class="expriText_1" style="border: solid 1rpx {{item.borderColor}};" data-text="{{item.txt}}" data-num="{{index}}" bindtap="clickExpri_1">设计预算</text>
+            </view>
+            <button bindtap="closeExpri_1" type="mini" class="btnWell_1">我选好了</button>
+          </view>
+          <!--隐藏的经验栏目-->
+          <view class="drow_1">
+            <label class="photo_1">经验描述：</label>
+            <textarea class="textarea_1" name="experienceDesc_1" value="{{experienceDesc_1}}" placeholder="经验描述"></textarea>
+          </view>
+          <view class="card_1" bindtap="upIDCard_1" hidden="{{IDcardBorder_1}}">
+            <text class="cardTxt_1">点击上传身份证正面</text>
+          </view>
+          <view class="IDcardPhoto_1" bindtap="upIDCard_1" hidden="{{IDcardPhoto_1}}">
+            <text class="orow_1">身份证正面照</text>
+            <image wx:if='{{card_1}}' class="IDcard_1" src="{{card_1}}"></image>
+          </view>
+          <view>
+            <button formType="submit" size="mini" class="btn_1" wx:if="{{count_1}}">{{btnName_1[0]}}</button>
+            <button formType="submit" size="mini" class="btn_1" wx:else>{{btnName_1[1]}}</button>
+          </view>
+        </view>
+      </form>
+    </view>
+  </view>
+  <view hidden="{{flagArray[2]}}" class="contain">
+    <view>
+      <form bindsubmit="submit_2">
+        <block wx:for="{{productSum_2}}" wx:for-item="item" wx:for-index="ind">
+          <!--第一个发布产品-->
+          <view class="addForm_2">
+            <label class="bigLabel_2">发布产品
+              <text hidden="{{productSum_2<2}}">{{ind+1}}</text>
+            </label>
+            <view class="contain_2">
+              <view class="row_2">
+                <label class="label_2">产品名称：</label>
+                <input placeholder="请输入产品名称" bindblur="getProductName_2" data-index="{{ind}}" class="_input_2" placeholder-class="placeholder_2" style="text-align:right;" value="{{produceName_2[ind]}}"></input>
+              </view>
+              <view class="row_2">
+                <label class="label_2">产品类型：</label>
+                <picker bindchange="bindPickerChange_2" data-index="{{ind}}" range="{{procutType_2}}" value="{{productIndex_2[ind]}}">
+                  <view class="picker_2">
+                    {{procutType_2[productIndex_2[ind]]}}
+                  </view>
+                </picker>
+              </view>
+              <view class="row_2">
+                <label class="address_2">公司地址：</label>
+                <image bindtap="getLocation_2" data-index="{{ind}}" class="arrowright_2" src="/images/image//arrowright.png"></image>
+              </view>
+              <view class="drow_2">
+                <label class="product_2">产品规格</label>
+                <textarea class="textarea_2" bindblur="getproduceSpecs_2" data-index="{{ind}}" placeholder="请输入产品规格" value="{{produceSpecs_2[ind]}}"></textarea>
+              </view>
+              <view class="row_2">
+                <label class="label_2">产品规格多样：</label>
+                <switch class="radio_2" data-index="{{ind}}" bindchange="click_2" checked="{{check_2[ind]}}"></switch>
+              </view>
+              <view class="row_2">
+                <view class="nrow_2" hidden="{{single_2[ind]}}">
+                  <label class="label_2">产品价格：</label>
+                  <input class="input_2" bindblur="getprice_2" data-index="{{ind}}" placeholder="请输入产品价格" placeholder-class="placeholder_2" value="{{price_2[ind]}}" style="text-align:center;"></input>
+                  <text class="text_2">元</text>
+                </view>
+                <!--产品价格-双-->
+                <view class="nrow_2" hidden="{{double_2[ind]}}">
+                  <label class="label_2">产品价格：</label>
+                  <input class="input_2" bindblur="getpriceLower_2" data-index="{{ind}}" placeholder="请输入产品价格" placeholder-class="placeholder_2" style="text-align:center;" value="{{priceLower_2[ind]}}"></input>
+                  <text class="text_2">-</text>
+                  <input class="input_2" bindblur="getpriceUpper_2" data-index="{{ind}}" placeholder="请输入产品价格" placeholder-class="placeholder_2" style="text-align:center;" value="{{priceUpper_2[ind]}}"></input>
+                  <text class="text_2">元</text>
+                </view>
+                <!--产品价格-双-->
+              </view>
+              <view class="row_2">
+                <label class="label_2">计量单位：</label>
+                <input placeholder="请输入计量单位" bindblur="getmeasureUnit_2" data-index="{{ind}}" class="_input_2" placeholder-class="placeholder_2" value="{{measureUnit_2[ind]}}"></input>
+              </view>
+              <view class="rownoBorder_2">
+                <label class="product_2">产品图片（请上传一张产品图片）</label>
+                <image bindtap="upProductImg_2" wx:if='{{productImg_2[ind]}}' data-index="{{ind}}" class="aptImg_2" src="{{productImg_2[ind]}}"></image>
+              </view>
+              <view class="drow_2">
+                <label class="product_2">产品详情</label>
+                <textarea class="textarea_2" bindblur="getproduceDetail_2" data-index="{{ind}}" placeholder="请输入产品详情" value="{{produceDetail_2[ind]}}"></textarea>
+              </view>
+            </view>
+          </view>
+          <!--第一个发布产品-->
+        </block>
+        <view class="addProduct_2" bindtap="addProduct_2" wx:if="{{count_2}}">添加产品</view>
+        <view>
+          <button formType="submit" size="mini" class="btn_2" wx:if="{{count_2}}">{{btnName_2[0]}}</button>
+          <button formType="submit" size="mini" class="btn_2" wx:else>{{btnName_2[1]}}</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

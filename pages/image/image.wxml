@@ -1,0 +1,22 @@
+<button bindtap="test" type="primary">image</button>
+
+<button bindtap="test1"></button>
+
+<image src="{{src}}"></image>
+
+
+<!--预览图片-->
+<button bindtap="test2">预览图片</button>
+<button bindtap="choose" type="primary">选择图片</button>
+
+<!--图片信息-->
+<button bindtap="test3">图片信息</button>
+
+<!--图片授权-->
+<button bindtap="test4">图片授权</button>
+
+<!--保存图片-->
+<button bindtap="save">保存图片</button>
+<button bindtap="select" type="primary">选择图片</button>
+
+<button type="warn" bindtap="Set">setting</button>

@@ -1,0 +1,39 @@
+<button bindtap='test' type='warn'>rquest</button>
+
+
+<scroll-view class="scroll1" scroll-x>
+  <view class="view1" style="background:red;"> 
+
+  </view>
+  <view class="view1" style="background:yellow;"> 
+
+  </view>
+  <view class="view1" style="background:blue;"> 
+
+  </view>
+  <view class="view1" style="background:pink;"> 
+
+  </view>
+  <view class="view1" style="background:black;"> 
+
+  </view>
+</scroll-view>
+
+<scroll-view class="scroll2" scroll-y scroll-top="300" bindscrolltoupper="test22">
+  <view class="view2" style="background:red;"> 
+
+  </view>
+  <view class="view2" style="background:yellow;"> 
+
+  </view>
+  <view class="view2" style="background:blue;"> 
+
+  </view>
+  <view class="view2" style="background:pink;"> 
+
+  </view>
+  <view class="view2" style="background:black;"> 
+
+  </view>
+</scroll-view>
+

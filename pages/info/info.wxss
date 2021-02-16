@@ -1,0 +1,9 @@
+.block{height: 50rpx; border-bottom: solid 2rpx gray;padding: 40rpx;display: flex;flex-direction: row;justify-content: space-between;}
+
+.label{}
+
+.nname .name .phone .role .panName{}
+
+.placeholder{text-align: right;}
+
+button{background-color: orange;color: white;margin-top: 100rpx;width: 90%;margin-left: 5%;height: 80rpx;}

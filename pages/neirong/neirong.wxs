@@ -1,0 +1,6 @@
+//对日期字符串进行截取
+var date = function (val) {
+  return val.substring(0, 10);
+}
+
+module.exports.date = date;

@@ -1,0 +1,47 @@
+<wxs src="laowu2.wxs" module="tools" />
+
+<view >
+  <block wx:for="{{content}}" wx:for-item="item" wx:for-index="index">
+    <!--一条记录-->
+    <view class="content" hidden="{{hidden}}">
+      <view bindtap="getDetail">
+        <view class="row">
+          <image class="headImg" wx:if='{{tools.imgUrl(item.headPortraitPath)}}' src="{{tools.imgUrl(item.headPortraitPath)}}"></image>
+          <view class="rrow">
+            <view class="name">{{content[index].captainName}}</view>
+            <view class="nrow">
+              <image class="flag" src="../../img/people.png"></image>
+              <text class="txt">{{content[index].workerNumber}}</text>
+              <text class="txt">人</text>
+              <image class="Rflag" src="../../img/location.png"></image>
+              <text class="txt">{{tools.sub(content[index].receivingArea)}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="trow" wx:for="{{tools.array(content[index].experienceType)}}" wx:for-item="it" wx:for-index="ind">
+          <text class="text">{{tools.array(content[index].experienceType)[ind]}}</text>
+        </view>
+      </view>
+      <view class="Lrow">
+        <view class="Ltxt">{{content[index].telephone}}</view>
+        <!--审核完成且未下架-->
+        <view class="btns" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==0?false:true}}">
+          <button class="btn" size="" bindtap="alter" data-id="{{content[index].id}}">修改</button>
+          <button class="btn" size="" bindtap="soldOut" data-id="{{content[index].id}}" data-ind="{{index}}">下架</button>
+        </view>
+        <!--审核完成且下架-->
+        <view class="btns" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==1?false:true}}">
+          <button class="btn" bindtap="putaway" data-id="{{content[index].id}}" data-ind="{{index}}">上架</button>
+          <button class="underbtn">下架中</button>
+        </view>
+        <!--审核中且下架-->
+        <view class="btns" style="color:grey;" hidden="{{tools.judge(content[index].auditStatus,putaway[index])==2?false:true}}">审核中</view>
+      </view>
+    </view>
+    <!--一条记录-->
+  </block>
+  <view class="empty" hidden="{{!hidden}}">
+    <image class="emptyImg" src="../../img/empty.png"></image>
+    <view>暂无数据</view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<!--<scroll-view scroll-y style="height:500rpx;" bindscrolltoupper="upper" bindscrolltolower="lower">
+
+<view bindtap='jump' id='{{index}}' class='ul' hidden='{{!flag}}' wx:for="{{data}}" wx:key="u">
+  <view class='li'>
+    <view class='left {{color[index]}}'>{{index+1}}</view>
+    <view class='center'>{{item.title}}</view>
+    <view class='right'>
+      <image src='../../img/return.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class="loading" hidden="{{!loadingMore}}">正在加载更多</view>
+<view class="loading" hidden="{{!loadingOver}}">加载完成</view>
+
+</scroll-view>-->
+
+
+<view bindtap='jump' id='{{index}}' class='ul' hidden='{{!flag}}' wx:for="{{data}}" wx:key="u">
+  <view class='li'>
+    <view class='left {{color[index]}}'>{{index+1}}</view>
+    <view class='center'>{{item.title}}</view>
+    <view class='right'>
+      <image src='../../img/return.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class="loading" hidden="{{!loadingMore}}">正在加载更多</view>
+<view class="loading" hidden="{{!loadingOver}}">加载完成</view>

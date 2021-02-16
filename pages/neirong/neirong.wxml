@@ -1,0 +1,14 @@
+<!-- 引入wxs脚本 -->
+<wxs src="neirong.wxs" module="tools" />
+
+<view class="page">
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="date">
+    {{tools.date(createTime)}}
+  </view>
+  <view class="content">
+    {{content}}
+  </view>
+</view>

@@ -1,0 +1,67 @@
+<!-- 引入wxs脚本 -->
+<wxs src="dashang.wxs" module="tools" />
+
+<view>
+  <view class="row">
+    <view class="title" style="border-bottom: solid 2rpx {{borderColor[0]}};color:{{fontColor[0]}}" bindtap="clickLabour" data-ind="0">劳务队</view>
+    <view class="title" style="border-bottom: solid 2rpx {{borderColor[1]}};color:{{fontColor[1]}};" bindtap="clickBudget" data-ind="1">设计预算师</view>
+    <view class="title" style="border-bottom: solid 2rpx {{borderColor[2]}};color:{{fontColor[2]}}" bindtap="clickNotice" data-ind="2">招标公告</view>
+  </view>
+  <view hidden="{{flagArray[0]}}" class="contain">
+    <block wx:key="{{labourData}}" wx:for-item="item" wx:for-index="index">
+      <!--一条记录-->
+      <view class="content" hidden="{{hidden[0]}}">
+        <view class="text">
+          <text>{{labourData[index].payerName}}</text>
+          <text>{{labourData[index].payAmount}}元</text>
+        </view>
+        <view class="text">
+          <text>打赏日期：{{tools.subDate(labourData[index].payTime)}}</text>
+        </view>
+      </view>
+      <!--一条记录-->
+    </block>
+    <view class="empty" hidden="{{!hidden[0]}}">
+      <image class="emptyImg" src="../../img/empty.png"></image>
+      <view>暂无数据</view>
+    </view>
+  </view>
+  <view hidden="{{flagArray[1]}}" class="contain">
+    <block wx:for="{{budgetData}}" wx:for-item="item" wx:for-index="index">
+      <!--一条记录-->
+      <view class="content" hidden="{{hidden[1]}}">
+        <view class="text">
+          <text>{{budgetData[index].payerName}}</text>
+          <text>{{budgetData[index].payAmount}}元</text>
+        </view>
+        <view class="text">
+          <text>打赏日期：{{tools.date(budgetData[index].payTime)}}</text>
+        </view>
+      </view>
+      <!--一条记录-->
+    </block>
+    <view class="empty" hidden="{{!hidden[1]}}">
+      <image class="emptyImg" src="../../img/empty.png"></image>
+      <view>暂无数据</view>
+    </view>
+  </view>
+  <view hidden="{{flagArray[2]}}" class="contain">
+    <block wx:for="{{noticeData}}" wx:for-item="item" wx:for-index="index">
+      <!--一条记录-->
+      <view class="content" hidden="{{hidden[2]}}">
+        <view class="text">
+          <text>{{noticeData[index].payerName}}</text>
+          <text>{{noticeData[index].payAmount}}元</text>
+        </view>
+        <view class="text">
+          <text>打赏日期：{{tools.date(noticeData[index].payTime)}}</text>
+        </view>
+      </view>
+      <!--一条记录-->
+    </block>
+    <view class="empty" hidden="{{!hidden[2]}}">
+      <image class="emptyImg" src="../../img/empty.png"></image>
+      <view>暂无数据</view>
+    </view>
+  </view>
+</view>
